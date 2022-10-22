@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.testng', name: 'testng', version: '7.6.1'
+    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.3'
+}
+
+prepareKotlinBuildScriptModel{
+
+}
+
+test{
+    useTestNG()
+}
